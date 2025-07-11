@@ -29,22 +29,31 @@
 
     .floating-image {
   position: fixed;
-  width: 80px; /* Tamaño reducido para menos solapamiento */
-  opacity: 0.7;
-  animation: floatAround 12s ease-in-out infinite alternate;
+  width: 60px;  /* Más pequeñas para menos superposición */
+  opacity: 0.8;
+  animation: floatAround 15s ease-in-out infinite alternate;
   z-index: -2;
+  pointer-events: none; /* Para que no interfieran con clics */
 }
 
+/* Distribución bien espaciada para evitar superposición */
 .floating-image:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-.floating-image:nth-child(2) { top: 15%; left: 30%; animation-delay: 3s; }
-.floating-image:nth-child(3) { top: 40%; left: 55%; animation-delay: 6s; }
-.floating-image:nth-child(4) { top: 60%; left: 80%; animation-delay: 9s; }
-.floating-image:nth-child(5) { top: 75%; left: 15%; animation-delay: 12s; }
-.floating-image:nth-child(6) { top: 35%; left: 45%; animation-delay: 15s; }
-.floating-image:nth-child(7) { top: 80%; left: 65%; animation-delay: 18s; }
-.floating-image:nth-child(8) { top: 25%; left: 20%; animation-delay: 21s; }
-.floating-image:nth-child(9) { top: 45%; left: 70%; animation-delay: 24s; }
-.floating-image:nth-child(10) { top: 70%; left: 85%; animation-delay: 27s; }
+.floating-image:nth-child(2) { top: 20%; left: 30%; animation-delay: 3s; }
+.floating-image:nth-child(3) { top: 35%; left: 55%; animation-delay: 6s; }
+.floating-image:nth-child(4) { top: 50%; left: 80%; animation-delay: 9s; }
+.floating-image:nth-child(5) { top: 65%; left: 20%; animation-delay: 12s; }
+.floating-image:nth-child(6) { top: 75%; left: 45%; animation-delay: 15s; }
+.floating-image:nth-child(7) { top: 85%; left: 70%; animation-delay: 18s; }
+.floating-image:nth-child(8) { top: 30%; left: 10%; animation-delay: 21s; }
+.floating-image:nth-child(9) { top: 55%; left: 35%; animation-delay: 24s; }
+.floating-image:nth-child(10) { top: 40%; left: 65%; animation-delay: 27s; }
+
+/* Animación para que se muevan suavemente */
+@keyframes floatAround {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(10px, -15px); }
+  100% { transform: translate(0, 0); }
+}
 
 
     /* Animación flotante */
