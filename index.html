@@ -15,9 +15,10 @@
       text-align: center;
       overflow-x: hidden;
     }
+    /* Fondo fijo animado */
     .background {
       position: fixed;
-      z-index: -1;
+      z-index: -3;
       width: 100vw;
       height: 100vh;
       background: url('Black And White Illustrative Western Rodeo Event Night Portrait Poster_20250710_105118_0000.jpg') no-repeat center center;
@@ -25,7 +26,43 @@
       filter: brightness(0.95);
       animation: subtleMove 20s infinite alternate ease-in-out;
     }
+
+    /* Imágenes flotantes */
+    .floating-image {
+      position: fixed;
+      width: 100px;
+      opacity: 0.7;
+      animation: floatAround 12s ease-in-out infinite alternate;
+      z-index: -2;
+    }
+    /* Posiciones diferentes y retrasos para cada imagen */
+    .floating-image:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+    .floating-image:nth-child(2) { top: 20%; left: 70%; animation-delay: 3s; }
+    .floating-image:nth-child(3) { top: 50%; left: 30%; animation-delay: 6s; }
+    .floating-image:nth-child(4) { top: 60%; left: 80%; animation-delay: 9s; }
+    .floating-image:nth-child(5) { top: 75%; left: 10%; animation-delay: 12s; }
+    .floating-image:nth-child(6) { top: 35%; left: 50%; animation-delay: 15s; }
+    .floating-image:nth-child(7) { top: 80%; left: 55%; animation-delay: 18s; }
+    .floating-image:nth-child(8) { top: 25%; left: 40%; animation-delay: 21s; }
+    .floating-image:nth-child(9) { top: 45%; left: 65%; animation-delay: 24s; }
+    .floating-image:nth-child(10) { top: 70%; left: 75%; animation-delay: 27s; }
+
+    /* Animación flotante */
+    @keyframes floatAround {
+      0%   { transform: translate(0, 0); }
+      50%  { transform: translate(20px, -15px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    @keyframes subtleMove {
+      from { transform: scale(1); }
+      to { transform: scale(1.02); }
+    }
+
+    /* Contenido arriba de todo */
     .content {
+      position: relative;
+      z-index: 1;
       padding: 3rem 1rem;
     }
     h1 {
@@ -69,23 +106,6 @@
       font-size: 2rem;
     }
 
-    .elements-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      margin: 3rem 0;
-    }
-
-    .element {
-      width: 60%;
-      max-width: 300px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: riseUp 1s ease forwards;
-      animation-delay: calc(var(--i) * 0.2s);
-    }
-
     @keyframes glow {
       from {
         text-shadow: 0 0 5px #ff2f2f;
@@ -95,31 +115,35 @@
       }
     }
 
-    @keyframes subtleMove {
-      from { transform: scale(1); }
-      to { transform: scale(1.02); }
-    }
-
     @keyframes floatStars {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
 
-    @keyframes riseUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media screen and (max-width: 600px) {
       h1 { font-size: 2.2rem; }
       .info { font-size: 1rem; }
+      .floating-image {
+        width: 60px !important;
+      }
     }
   </style>
 </head>
 <body>
   <div class="background"></div>
+
+  <!-- Imágenes flotantes como fondo -->
+  <div class="floating-image"><img src="recortes/vinyl.png" alt="Vinyl" /></div>
+  <div class="floating-image"><img src="recortes/horseshoe.png" alt="Horseshoe" /></div>
+  <div class="floating-image"><img src="recortes/music_notes.png" alt="Music Notes" /></div>
+  <div class="floating-image"><img src="recortes/decor_lines.png" alt="Decor Lines" /></div>
+  <div class="floating-image"><img src="recortes/bottle.png" alt="Bottle" /></div>
+  <div class="floating-image"><img src="recortes/stars.png" alt="Stars" /></div>
+  <div class="floating-image"><img src="recortes/guitar.png" alt="Guitar" /></div>
+  <div class="floating-image"><img src="recortes/wagon_wheel.png" alt="Wagon Wheel" /></div>
+  <div class="floating-image"><img src="recortes/sheet_music.png" alt="Sheet Music" /></div>
+  <div class="floating-image"><img src="recortes/mountain.png" alt="Mountain" /></div>
+
   <div class="content">
     <h1>NIZA'S BIRTHDAY</h1>
     <div class="info">
@@ -127,19 +151,6 @@
       <p class="decorative-stars"><span>✯</span><span>✯</span><span>✯</span></p>
       <p style="color: #ff2f2f; font-size: 1.5rem;">9 AGO | 6:00PM</p>
       <p>Frida's, Decima Plaza</p>
-    </div>
-
-    <div class="elements-container">
-      <img src="recortes/vinyl.png" class="element" style="--i:0;" alt="Vinyl" />
-      <img src="recortes/horseshoe.png" class="element" style="--i:1;" alt="Horseshoe" />
-      <img src="recortes/music_notes.png" class="element" style="--i:2;" alt="Music Notes" />
-      <img src="recortes/decor_lines.png" class="element" style="--i:3;" alt="Decor Lines" />
-      <img src="recortes/bottle.png" class="element" style="--i:4;" alt="Bottle" />
-      <img src="recortes/stars.png" class="element" style="--i:5;" alt="Stars" />
-      <img src="recortes/guitar.png" class="element" style="--i:6;" alt="Guitar" />
-      <img src="recortes/wagon_wheel.png" class="element" style="--i:7;" alt="Wagon Wheel" />
-      <img src="recortes/sheet_music.png" class="element" style="--i:8;" alt="Sheet Music" />
-      <img src="recortes/mountain.png" class="element" style="--i:9;" alt="Mountain" />
     </div>
 
     <iframe 
@@ -160,3 +171,4 @@
   </div>
 </body>
 </html>
+
