@@ -15,83 +15,44 @@
       text-align: center;
       overflow-x: hidden;
     }
-    /* Fondo fijo animado */
+
     .background {
       position: fixed;
-      z-index: -3;
+      z-index: -1;
       width: 100vw;
       height: 100vh;
-      background: url('Black And White Illustrative Western Rodeo Event Night Portrait Poster_20250710_105118_0000.jpg') no-repeat center center;
+      background: url('recortes/backgroundc.png') no-repeat center center;
       background-size: cover;
-      filter: brightness(0.95);
-      animation: subtleMove 20s infinite alternate ease-in-out;
+      filter: brightness(0.85); /* para que el texto encima se vea mejor */
     }
 
-    .floating-image {
-  position: fixed;
-  width: 60px;  /* Más pequeñas para menos superposición */
-  opacity: 0.8;
-  animation: floatAround 15s ease-in-out infinite alternate;
-  z-index: -2;
-  pointer-events: none; /* Para que no interfieran con clics */
-}
-
-/* Distribución bien espaciada para evitar superposición */
-.floating-image:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-.floating-image:nth-child(2) { top: 20%; left: 30%; animation-delay: 3s; }
-.floating-image:nth-child(3) { top: 35%; left: 55%; animation-delay: 6s; }
-.floating-image:nth-child(4) { top: 50%; left: 80%; animation-delay: 9s; }
-.floating-image:nth-child(5) { top: 65%; left: 20%; animation-delay: 12s; }
-.floating-image:nth-child(6) { top: 75%; left: 45%; animation-delay: 15s; }
-.floating-image:nth-child(7) { top: 85%; left: 70%; animation-delay: 18s; }
-.floating-image:nth-child(8) { top: 30%; left: 10%; animation-delay: 21s; }
-.floating-image:nth-child(9) { top: 55%; left: 35%; animation-delay: 24s; }
-.floating-image:nth-child(10) { top: 40%; left: 65%; animation-delay: 27s; }
-
-/* Animación para que se muevan suavemente */
-@keyframes floatAround {
-  0%   { transform: translate(0, 0); }
-  50%  { transform: translate(10px, -15px); }
-  100% { transform: translate(0, 0); }
-}
-
-
-    /* Animación flotante */
-    @keyframes floatAround {
-      0%   { transform: translate(0, 0); }
-      50%  { transform: translate(20px, -15px); }
-      100% { transform: translate(0, 0); }
-    }
-
-    @keyframes subtleMove {
-      from { transform: scale(1); }
-      to { transform: scale(1.02); }
-    }
-
-    /* Contenido arriba de todo */
     .content {
-      position: relative;
-      z-index: 1;
       padding: 3rem 1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
+
     h1 {
       font-size: 3rem;
       color: #ff2f2f;
       text-shadow: 0 0 10px #ff2f2f;
-      margin-bottom: 0.5rem;
       animation: glow 2s ease-in-out infinite alternate;
+      margin-bottom: 1rem;
     }
+
     .info {
       font-size: 1.2rem;
       color: white;
       margin-bottom: 2rem;
     }
+
     .quote {
       color: #ff2f2f;
       font-style: italic;
       font-size: 1.1rem;
       margin-top: 2rem;
     }
+
     iframe {
       width: 90%;
       height: 300px;
@@ -100,64 +61,24 @@
       border-radius: 1rem;
       box-shadow: 0 0 10px #000;
     }
-    .pinterest {
-      margin: 2rem auto;
-    }
-    .decorative-stars {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      animation: floatStars 6s ease-in-out infinite;
-    }
-    .decorative-stars span {
-      color: #fff;
-      font-size: 2rem;
-    }
 
     @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #ff2f2f;
-      }
-      to {
-        text-shadow: 0 0 20px #ff2f2f;
-      }
-    }
-
-    @keyframes floatStars {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      from { text-shadow: 0 0 5px #ff2f2f; }
+      to   { text-shadow: 0 0 20px #ff2f2f; }
     }
 
     @media screen and (max-width: 600px) {
       h1 { font-size: 2.2rem; }
       .info { font-size: 1rem; }
-      .floating-image {
-        width: 60px !important;
-      }
     }
   </style>
 </head>
 <body>
   <div class="background"></div>
-
-  <!-- Imágenes flotantes como fondo -->
-  <div class="floating-image"><img src="recortes/vinyl.png" alt="Vinyl" /></div>
-  <div class="floating-image"><img src="recortes/horseshoe.png" alt="Horseshoe" /></div>
-  <div class="floating-image"><img src="recortes/music_notes.png" alt="Music Notes" /></div>
-  <div class="floating-image"><img src="recortes/decor_lines.png" alt="Decor Lines" /></div>
-  <div class="floating-image"><img src="recortes/bottle.png" alt="Bottle" /></div>
-  <div class="floating-image"><img src="recortes/stars.png" alt="Stars" /></div>
-  <div class="floating-image"><img src="recortes/guitar.png" alt="Guitar" /></div>
-  <div class="floating-image"><img src="recortes/wagon_wheel.png" alt="Wagon Wheel" /></div>
-  <div class="floating-image"><img src="recortes/sheet_music.png" alt="Sheet Music" /></div>
-  <div class="floating-image"><img src="recortes/mountain.png" alt="Mountain" /></div>
-
   <div class="content">
     <h1>NIZA'S BIRTHDAY</h1>
     <div class="info">
       <p>Coyote ugly theme</p>
-      <p class="decorative-stars"><span>✯</span><span>✯</span><span>✯</span></p>
       <p style="color: #ff2f2f; font-size: 1.5rem;">9 AGO | 6:00PM</p>
       <p>Frida's, Decima Plaza</p>
     </div>
@@ -168,11 +89,6 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-
-    <div class="pinterest">
-      <h2 style="color:#fff">Dresscode Moodboard</h2>
-      <iframe src="https://www.pinterest.com/embed/board/YOUR_BOARD_ID_HERE/" height="400" width="80%" style="border:none;"></iframe>
-    </div>
 
     <div class="quote">
       "Coyote ugly isn't a place. It's a state of mind!"
