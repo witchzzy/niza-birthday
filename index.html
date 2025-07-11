@@ -27,25 +27,24 @@
       animation: subtleMove 20s infinite alternate ease-in-out;
     }
 
-    /* Imágenes flotantes */
     .floating-image {
-      position: fixed;
-      width: 100px;
-      opacity: 0.7;
-      animation: floatAround 12s ease-in-out infinite alternate;
-      z-index: -2;
-    }
-    /* Posiciones diferentes y retrasos para cada imagen */
-    .floating-image:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-.floating-image:nth-child(2) { top: 10%; left: 80%; animation-delay: 3s; }
-.floating-image:nth-child(3) { top: 50%; left: 20%; animation-delay: 6s; }
-.floating-image:nth-child(4) { top: 50%; left: 70%; animation-delay: 9s; }
-.floating-image:nth-child(5) { top: 80%; left: 30%; animation-delay: 12s; }
-.floating-image:nth-child(6) { top: 80%; left: 60%; animation-delay: 15s; }
-.floating-image:nth-child(7) { top: 30%; left: 40%; animation-delay: 18s; }
-.floating-image:nth-child(8) { top: 60%; left: 50%; animation-delay: 21s; }
-.floating-image:nth-child(9) { top: 40%; left: 65%; animation-delay: 24s; }
-.floating-image:nth-child(10) { top: 70%; left: 75%; animation-delay: 27s; }
+  position: fixed;
+  width: 80px; /* Tamaño reducido para menos solapamiento */
+  opacity: 0.7;
+  animation: floatAround 12s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+.floating-image:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.floating-image:nth-child(2) { top: 15%; left: 30%; animation-delay: 3s; }
+.floating-image:nth-child(3) { top: 40%; left: 55%; animation-delay: 6s; }
+.floating-image:nth-child(4) { top: 60%; left: 80%; animation-delay: 9s; }
+.floating-image:nth-child(5) { top: 75%; left: 15%; animation-delay: 12s; }
+.floating-image:nth-child(6) { top: 35%; left: 45%; animation-delay: 15s; }
+.floating-image:nth-child(7) { top: 80%; left: 65%; animation-delay: 18s; }
+.floating-image:nth-child(8) { top: 25%; left: 20%; animation-delay: 21s; }
+.floating-image:nth-child(9) { top: 45%; left: 70%; animation-delay: 24s; }
+.floating-image:nth-child(10) { top: 70%; left: 85%; animation-delay: 27s; }
 
 
     /* Animación flotante */
