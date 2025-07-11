@@ -14,8 +14,7 @@
       font-family: 'Staatliches', sans-serif;
       text-align: center;
       overflow-x: hidden;
-    }
-
+    
     .background {
       position: fixed;
       z-index: -1;
@@ -33,6 +32,7 @@
     }
 
     h1 {
+
       font-size: 3rem;
       color: #ff2f2f;
       text-shadow: 0 0 10px #ff2f2f;
@@ -72,11 +72,33 @@
       .info { font-size: 1rem; }
     }
   </style>
+.decorative-stars {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  animation: floatStars 6s ease-in-out infinite;
+}
+
+.decorative-stars span {
+  color: #fff;
+  font-size: 2rem;
+}
+
+@keyframes floatStars {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 </head>
 <body>
   <div class="background"></div>
   <div class="content">
     <h1>NIZA'S BIRTHDAY</h1>
+<div class="decorative-stars">
+  <span>✯</span><span>✯</span><span>✯</span>
+</div>
+
     <div class="info">
       <p>Coyote ugly theme</p>
       <p style="color: #ff2f2f; font-size: 1.5rem;">9 AGO | 6:00PM</p>
