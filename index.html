@@ -16,9 +16,9 @@
       text-align: center;
       overflow-x: hidden;
     }
-     .contenedor-decoracion {
-  background: transparent !important;  /* Asegura que el fondo sea transparente */
-}
+    .contenedor-decoracion {
+      background: transparent !important;  /* Asegura que el fondo sea transparente */
+    }
 
     .background {
       position: fixed;
@@ -101,28 +101,29 @@
       h1 { font-size: 2.2rem; }
       .info { font-size: 1rem; }
     }
-	.image-gallery {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .image-gallery img {
-    width: 0px;
-    height: auto;
-    animation: floatUpDown 3s ease-in-out infinite;
-  }
+    .image-gallery {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
 
-  /* Animación para subir y bajar */
-  @keyframes floatUpDown {
-    0%, 100% {
-      transform: translateY(0);
+    .image-gallery img {
+      width: 100px;
+      height: auto;
+      animation: floatUpDown 3s ease-in-out infinite;
     }
-    50% {
-      transform: translateY(-15px);
+
+    /* Animación para subir y bajar */
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
     }
-  }
   </style>
 </head>
 <body>
@@ -136,57 +137,48 @@
       <p>Coyote ugly theme</p>
       <p style="color: #ff2f2f; font-size: 1.5rem;">9 AGO | 6:00PM</p>
       <p>Frida's, Decima Plaza</p>
-<img src="recortes/decor_lines1.png" alt="Línea decorativa" style="display: block; margin: 2rem auto; max-width: 300px; opacity: 0.7;">
+      <img src="recortes/decor_lines1.png" alt="Línea decorativa" style="display: block; margin: 2rem auto; max-width: 300px; opacity: 0.7;">
       <!-- Espacio editable -->
       <p style="margin-top: 1rem; font-style: italic; max-width: 500px; margin-left: auto; margin-right: auto;">
-Te invito a celebrar mi cumpleaños con una fiesta al estilo <em>Coyote Ugly</em>..
-Vístete para la ocasión y trae buena energía.
-El consumo será por cuenta propia.
-Será una noche para compartir y pasarla bien.
-¡Espero contar contigo!
-<span style="font-size: 0.9rem; font-weight: bold;">**Por favor confirmar asistencia.**</span> 
-</p>
-<img src="recortes/decor_lines1.png" alt="Línea decorativa" style="display: block; margin: 2rem auto; max-width: 300px; opacity: 0.7; transform: rotate(180deg);">
+        Te invito a celebrar mi cumpleaños con una fiesta al estilo <em>Coyote Ugly</em>..
+        Vístete para la ocasión y trae buena energía.
+        El consumo será por cuenta propia.
+        Será una noche para compartir y pasarla bien.
+        ¡Espero contar contigo!
+        <span style="font-size: 0.9rem; font-weight: bold;">**Por favor confirmar asistencia.**</span> 
+      </p>
+      <img src="recortes/decor_lines1.png" alt="Línea decorativa" style="display: block; margin: 2rem auto; max-width: 300px; opacity: 0.7; transform: rotate(180deg);">
     </div>
-<!-- Ubicación -->
-<h2 style="color: #ff2f2f; margin-top: 2rem; margin-bottom: 1rem; font-family: 'Cinzel', serif;">Ubicación</h2>
-
+    <!-- Ubicación -->
+    <h2 style="color: #ff2f2f; margin-top: 2rem; margin-bottom: 1rem; font-family: 'Cinzel', serif;">Ubicación</h2>
     <!-- Mapa -->
-
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.8854411010937!2d-90.5166428!3d14.5839157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a370bfefb869%3A0xbb3148a8d1895eed!2sFrida%27s%20D%C3%A9cima%20Plaza!5e0!3m2!1ses-419!2sgt!4v1720610000000" 
-  width="90%" 
-  height="300" 
-  style="border:none; border-radius: 1rem;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
-
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.8854411010937!2d-90.5166428!3d14.5839157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a370bfefb869%3A0xbb3148a8d1895eed!2sFrida%27s%20D%C3%A9cima%20Plaza!5e0!3m2!1ses-419!2sgt!4v1720610000000" 
+      width="90%" 
+      height="300" 
+      style="border:none; border-radius: 1rem;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     <!-- Pinterest Moodboard -->
     <div class="pinterest">
-  <h2 style="color:#fff; margin-bottom: 1rem;">Dresscode board</h2>
-  <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/ev_issa/coyote-ugly-bday/"></a>
-<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-<h2 style="color: #ff2f2f; margin-top: 3rem;">Playlist</h2>
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5OpddoW4b3YbrImUGlXv7N?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-
+      <h2 style="color:#fff; margin-bottom: 1rem;">Dresscode board</h2>
+      <a data-pin-do="embedBoard" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/ev_issa/coyote-ugly-bday/"></a>
+      <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+      <h2 style="color: #ff2f2f; margin-top: 3rem;">Playlist</h2>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5OpddoW4b3YbrImUGlXv7N?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
     <div class="quote">
       "Coyote ugly isn't a place. It's a state of mind!"
-<p style="font-size: 0.4rem; text-align: center; color: #fff; font-style: italic; margin-top: 0.5rem;">
-  <strong>*Don't forget to bring a gift ;)*</strong>
-</p>
-
-<div class="image-gallery">
-  <img src="recortes/img1.png" alt="Imagen 1">
-  <img src="recortes/img2.png" alt="Imagen 2">
-  <img src="recortes/img3.png" alt="Imagen 3">
-</div>
-
+      <p style="font-size: 0.4rem; text-align: center; color: #fff; font-style: italic; margin-top: 0.5rem;">
+        <strong>*Don't forget to bring a gift ;)*</strong>
+      </p>
+      <div class="image-gallery">
+        <img src="recortes/img1.png" alt="Imagen 1">
+        <img src="recortes/img2.png" alt="Imagen 2">
+        <img src="recortes/img3.png" alt="Imagen 3">
+      </div>
     </div>
   </div>
 </body>
